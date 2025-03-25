@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row grafic">
+        <div id="total-wealth" class="col-sm text-center grafic">
+          <h2>Total Wealth: 14000 RON</h2>
+          <h2>Total Profit: 1712 RON</h2>
+        </div>
+        <div id="total-ro" class="col-sm text-center grafic">
+          <h2>Total in BVB: 6500 RON</h2>
+          <h2>Total Profit: 1522 RON</h2>
+        </div>
+        <div id="total-ext" class="col-sm text-center grafic">
+          <h2>Total in Extern: 7533 RON</h2>
+          <h2>Total Profit: 1222 RON</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row grafic align-items-center">
+        <div id="detineri-categorii" class="col-sm-4 grafic"></div>
+        <div class="col-sm">
+          <table class="table text-center table-striped">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                    <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+                  </svg>
+                 Tip
+                </th>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
+                  </svg>
+                 Valoare
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                  </svg>
+                 Tinta
+                </th>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
+                  </svg>
+                 Valoare Tinta
+                </th>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
+                  </svg>
+                 Diferenta
+                </th>
+              </tr>
+            </thead>
+            <tbody id = 'procent-investitii'>
+            </tbody>
+          </table>
+        </div>
+      </div>
+        <div class="row grafic align-items-center">
+        <div id="variatie-profit" class="col-sm-4 grafic"></div>
+        <div class="col-sm">
+          <table class="table text-center table-dark table-hover">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                    <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+                  </svg>
+                 Tip
+                </th>
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
+                  </svg>
+                 Profit potential
+                <th scope="col">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
+                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
+                  </svg>
+                 Profit marcat
+                </th>
+                <th scope="col">
+                 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                  </svg>
+                 Profitabilitate anuala
+                </th>
+              </tr>
+            </thead>
+            <tbody id = 'profit-investitii'>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row grafic">
+        <div id="variatie-activ" class="col-sm-2 grafic"></div>
+        <div id="detineri-bvb" class="col-sm grafic"></div>
+        <div id="detineri-etf" class="col-sm grafic"></div>
+        <div id="detineri-piete" class="col-sm grafic"></div>
+      </div>
+      <div class="row grafic">
+        
+      </div>
+      <!--<div class="row grafic">
+        <div id="detineri-bvb" class="col-sm grafic"></div>
+        <div id="detineri-etf" class="col-sm grafic"></div>
+        <div id="detineri-piete" class="col-sm grafic"></div>
+      </div>-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+    
+    //data
+    let categoriiDetineri = [
+            ['Bursa', 29.4],
+            ["Depozite", 37.7],
+            ["Economii", 5.3],
+            ["Titluri", 15.1],
+            ["ETF", 12.6]
+        ]
+    let detineriETF = [
+        ['VUAA', 50],
+        ["IS3N", 5],
+        ["VWCG", 40],
+        ["AAKI", 5],
+    ]
+
+    let detineriBVB = [
+          ['MCAB', 0.3],
+          ["TEL", 4.7],
+          ["SNG", 14.7],
+          ["H2O", 24.7],
+          ["TLV", 11.7],
+          ["BRD", 5.4],
+          ["DIGI", 7.1],
+          ["SNP", 31.1],
+    ]
+
+    let detineriPiete = [
+          ['Europe', 20],
+          ["Romania", 50],
+          ["SUA", 20],
+          ["ASIA", 10],
+    ]
+
+    let tipInvestitie = [
+          {tip:'Bursa', valoare: 12000, efectiv: 38.34, tinta: 45, valTinta: 12333 , diferenta: 333},
+          {tip:'ETF', valoare:1600, efectiv: 12.34, tinta: 20, valTinta: 1333, diferenta: 123},
+          {tip:'Economii', valoare:1000, efectiv: 7.34, tinta: 15, valTinta: 256, diferenta: 23},
+          {tip:'Titluri', valoare:800, efectiv: 10.34, tinta: 10, valTinta: 1333, diferenta: 123},
+          {tip:'Depozite', valoare:16000, efectiv: 22.34, tinta: 10, valTinta: 13330, diferenta: 885},
+    ]
+
+    let profitInvestitii = [
+          {tip:'Bursa', profitPotential: 1200, profitMarcat: 380.34, profitAnuala: 4.5,},
+          {tip:'ETF', profitPotential: 200, profitMarcat: 180.34, profitAnuala: 1.5,},
+          {tip:'Economii', profitPotential: 358, profitMarcat: 2380.34, profitAnuala: 14.7,},
+          {tip:'Titluri', profitPotential: 1210, profitMarcat: 80.34, profitAnuala: 2.5,},
+          {tip:'Depozite', profitPotential: 100, profitMarcat: 580.34, profitAnuala: 3.6,},
+    ]
+
+  // Set options for pie chart.
+    var pieChartOptions = { title: '',
+              chartArea: { width:"100%" },
+              width: "100%",
+              height: 450,
+              legend: { position:'bottom' },
+              is3D: true,
+              titleTextStyle: { fontSize: 20, color: 'red' },
+              sliceVisibilityThreshold: 0.05
+              };
+
+        
+      // Load Charts and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Draw the pie chart when Charts is loaded.
+      google.charts.setOnLoadCallback(function () {drawPieChart(categoriiDetineri, pieChartOptions, 'detineri-categorii', 'Procentaj pe tip de investitie')});
+      google.charts.setOnLoadCallback(function () {drawPieChart(detineriBVB, pieChartOptions, 'detineri-bvb', 'Actiuni BVB')});
+      google.charts.setOnLoadCallback(function () {drawPieChart(detineriETF, pieChartOptions, 'detineri-etf', 'Actiuni ETF')});
+      google.charts.setOnLoadCallback(function () {drawPieChart(detineriPiete, pieChartOptions, 'detineri-piete', 'Actiuni Piete')});
+      google.charts.setOnLoadCallback(drawVaritatieProfit);
+      google.charts.setOnLoadCallback(drawVariatieActiv);
+      // Callback that draws the pie chart
+      
+      
+
+      drawTableTipInvestitie(tipInvestitie);
+      drawTableProfitInvestitie (profitInvestitii);
+
+      function drawTableTipInvestitie (array) {
+
+        let tableContent = ''
+        array.forEach(element => {
+          
+          tableContent = tableContent + '<tr><td>' + element.tip + '</td><td>' + element.valoare + '</td><td>' +
+            element.tinta + '</td><td>' + element.valTinta + '</td><td>' + element.diferenta + '</td></tr>'
+        
+        });
+        
+        document.getElementById('procent-investitii').innerHTML = tableContent
+
+      }
+
+      function drawTableProfitInvestitie (array) {
+
+      let tableContent = ''
+      array.forEach(element => {
+        
+        tableContent = tableContent + '<tr><td>' + element.tip + '</td><td>' + element.profitPotential + '</td><td>' +
+          element.profitMarcat + '</td><td>' + element.profitAnuala + '</td></tr>'
+
+      });
+
+      document.getElementById('profit-investitii').innerHTML = tableContent
+    
+    }
+
+      
+
+      function drawPieChart (pieChartData, pieChartOptions, divName, pieChartName) {
+
+        // Create the data table
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Actiune');
+        data.addColumn('number', 'Slices');
+        data.addRows(pieChartData);
+        // Set the name
+        pieChartOptions.title = pieChartName;
+
+        // Instantiate and draw the chart
+        var chart = new google.visualization.PieChart(document.getElementById(divName));
+        chart.draw(data, pieChartOptions);
+      }
+
+      function drawVaritatieProfit() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('date', 'Data');
+      data.addColumn('number', 'Profit');
+
+      data.addRows([
+        [new Date(2025,1,1), 1250],   [new Date(2025,1,2), 1336],  [new Date(2025,1,3), 1122],  [new Date(2025,1,4), 1700],  [new Date(2025,1,6), 1825],  [new Date(2025,1,7), 1444],
+        [new Date(2025,1,8), 1350],   [new Date(2025,1,9), 1436],  [new Date(2025,1,10), 1322],  [new Date(2025,1,11), 1500],  [new Date(2025,1,12), 1625],  [new Date(2025,1,13), 1454],
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Data',
+          format: 'YY-MM-dd'
+        },
+        vAxis: {
+          title: 'Valoare'
+        },
+        height: 450,
+        chartArea: {
+        width:"90%"
+        },
+        title: "Variatie Profit",
+        titleTextStyle: {fontSize:20,color:'red'},
+        
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('variatie-profit'));
+
+      chart.draw(data, options);
+      }
+      
+      function drawVariatieActiv() {
+      var data = google.visualization.arrayToDataTable([
+        ["Actiune", "Variatie pe activ", { role: "style" } ],
+        ["SNP", -8.94, "#b87333"],
+        ["SNN", 10.49, "silver"],
+        ["H2O", -19.30, "gold"],
+        ["SSS", 21.45, "green"],
+        ["UTF", 11.5, "red"],
+        ["RED", -10.45, "blue"],
+        ["RRS", 1.45, "grey"],
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        chartArea: {width:"100%"},
+        title: "Variatie pe activ",
+        titleTextStyle: {fontSize:20,color:'red'},
+        width: "100%",
+        height: 500,
+        bar: {groupWidth: "90%"},
+        legend: { position: "none"},
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("variatie-activ"));
+      chart.draw(view, options);
+  }
+    </script>
+        
+  </body>
+</html>
