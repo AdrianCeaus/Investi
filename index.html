@@ -146,10 +146,24 @@
         </div>
       </div>
       <div class="row grafic">
-        <div id="variatie-activ" class="col-sm-2 grafic"></div>
-        <div id="detineri-bvb" class="col-sm grafic"></div>
-        <div id="detineri-etf" class="col-sm grafic"></div>
-        <div id="detineri-piete" class="col-sm grafic"></div>
+        <div class="col-sm-6 grafic">
+          <select class="form-select" aria-label="pie-chart-variatie">
+            <option selected value="bvb">bvb</option>
+            <option value="etf">etf</option>
+            <option value="piete">piete</option>
+            <option value="sector">sector</option>
+          </select>
+          <div id="variatie-activ"></div>
+        </div>
+        <div  class="col-sm-6 grafic">
+          <select class="form-select" id = "categorySelect" onchange="handleCategoryChange()" aria-label="pie-chart-detineri">
+            <option selected value="bvb">bvb</option>
+            <option value="etf">etf</option>
+            <option value="piete">piete</option>
+            <option value="sector">sector</option>
+          </select>
+          <div id="chart-detineri"></div>
+        </div>
       </div>
       <div class="row grafic">
         
@@ -198,6 +212,14 @@
           ["ASIA", 10],
     ]
 
+    let detineriSector = [
+          ['Energie', 20],
+          ["Financiar", 50],
+          ["Comunicare", 20],
+          ["Altele", 10],
+    ]
+
+
     let tipInvestitie = [
           {tip:'Bursa', valoare: 12000, efectiv: 38.34, tinta: 45, valTinta: 12333 , diferenta: 333},
           {tip:'ETF', valoare:1600, efectiv: 12.34, tinta: 20, valTinta: 1333, diferenta: 123},
@@ -225,15 +247,40 @@
               sliceVisibilityThreshold: 0.05
               };
 
-        
+      
+
+    function handleCategoryChange() {
+      const selectedCategory = document.getElementById('categorySelect').value;
+      let piechartData = '';
+      let pieChartTitle = '';
+      switch (selectedCategory) {
+        case "etf":
+          piechartData = detineriETF
+          pieChartTitle = "Procentaj detineri ETF"
+          break;
+        case "piete":
+          piechartData = detineriPiete
+          pieChartTitle = "Procentaj detineri pe piete"
+          break;
+        case "sector":
+          piechartData = detineriSector
+          pieChartTitle = "Procentaj detineri pe sector BVB"
+          break;
+        default:
+        piechartData = detineriBVB
+        pieChartTitle = "Procentaj detineri pe BVB"
+      }
+      google.charts.setOnLoadCallback(function () {drawPieChart(piechartData, pieChartOptions, 'chart-detineri', pieChartTitle)});
+    }
+
       // Load Charts and the corechart package.
       google.charts.load('current', {'packages':['corechart']});
 
+      let pieChartTitle = "Procentaj detineri pe BVB"
+      let piechartData = detineriBVB 
       // Draw the pie chart when Charts is loaded.
       google.charts.setOnLoadCallback(function () {drawPieChart(categoriiDetineri, pieChartOptions, 'detineri-categorii', 'Procentaj pe tip de investitie')});
-      google.charts.setOnLoadCallback(function () {drawPieChart(detineriBVB, pieChartOptions, 'detineri-bvb', 'Actiuni BVB')});
-      google.charts.setOnLoadCallback(function () {drawPieChart(detineriETF, pieChartOptions, 'detineri-etf', 'Actiuni ETF')});
-      google.charts.setOnLoadCallback(function () {drawPieChart(detineriPiete, pieChartOptions, 'detineri-piete', 'Actiuni Piete')});
+      google.charts.setOnLoadCallback(function () {drawPieChart(piechartData, pieChartOptions, 'chart-detineri', pieChartTitle)});
       google.charts.setOnLoadCallback(drawVaritatieProfit);
       google.charts.setOnLoadCallback(drawVariatieActiv);
       // Callback that draws the pie chart
