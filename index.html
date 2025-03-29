@@ -436,7 +436,11 @@
           fontColor: 'black',
           showScale: true,
           height: 250,
-          generateTooltip: showFullTooltip
+          generateTooltip: showFullTooltip,
+          eventsConfig: {
+              rollup: ['dblclick'], // right-click
+              drilldown: ['click']
+          }
         });
         
   function showFullTooltip(row, size, value) {
