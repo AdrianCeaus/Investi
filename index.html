@@ -58,38 +58,11 @@
           <table class="table text-center table-striped">
             <thead>
               <tr>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
-                    <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
-                  </svg>
-                 Tip
-                </th>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
-                  </svg>
-                 Valoare
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
-                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                  </svg>
-                 Tinta
-                </th>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
-                  </svg>
-                 Valoare Tinta
-                </th>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
-                  </svg>
-                 Diferenta
-                </th>
+                <th scope="col"><i class="bi bi-bank"></i> Tip</th>
+                <th scope="col"><i class="bi bi-cash"></i> Valoare</th>
+                <th scope="col"><i class="bi bi-percent"></i> Tinta</th>
+                <th scope="col"><i class="bi bi-cash"></i> Valoare Tinta</th>
+                <th scope="col"><i class="bi bi-cash"></i> Diferenta</th>
               </tr>
             </thead>
             <tbody id = 'procent-investitii'>
@@ -97,38 +70,19 @@
           </table>
         </div>
       </div>
-        <div class="row grafic align-items-center">
-        <div id="variatie-profit" class="col-sm-4 grafic"></div>
+    <div class="container">
+      <div class="row grafic align-items-center">
+        <div id="variatie-profit" class="col-sm-3 grafic"></div>
+        <div id="variatie-investitie" class="col-sm-3 grafic"></div>
         <div class="col-sm">
           <table class="table text-center table-striped">
             <thead>
               <tr>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
-                    <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
-                  </svg>
-                 Tip
-                </th>
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
-                  </svg>
-                 Profit potential
-                <th scope="col">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                    <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z"/>
-                  </svg>
-                 Profit marcat
-                </th>
-                <th scope="col">
-                 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
-                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
-                  </svg>
-                 Profitabilitate anuala
-                </th>
+                <th scope="col"><i class="bi bi-bank"></i> Tip</th>
+                <th scope="col"><i class="bi bi-cash"></i> Profit potential</th>
+                <th scope="col"><i class="bi bi-cash"></i> Profit marcat</th>
+                <th scope="col"><i class="bi bi-cash"></i> Investitie</th>
+                <th scope="col"><i class="bi bi-percent"></i> Profitabilitate anuala</th>
               </tr>
             </thead>
             <tbody id = 'profit-investitii'>
@@ -136,6 +90,8 @@
           </table>
         </div>
       </div>
+    </div>
+    <div class="container">
       <div class="row grafic">
         <div class="col-sm-6 grafic">
           <select class="form-select" aria-label="pie-chart-variatie">
@@ -156,6 +112,7 @@
           <div id="chart-detineri"></div>
         </div>
       </div>
+    </div>
       <div class="row grafic">
         
       </div>
@@ -220,11 +177,11 @@
     ]
 
     let profitInvestitii = [
-          {tip:'Bursa', profitPotential: 1200, profitMarcat: 380.34, profitAnuala: 4.5,},
-          {tip:'ETF', profitPotential: 200, profitMarcat: 180.34, profitAnuala: 1.5,},
-          {tip:'Economii', profitPotential: 358, profitMarcat: 2380.34, profitAnuala: 14.7,},
-          {tip:'Titluri', profitPotential: 1210, profitMarcat: 80.34, profitAnuala: 2.5,},
-          {tip:'Depozite', profitPotential: 100, profitMarcat: 580.34, profitAnuala: 3.6,},
+          {tip:'Bursa', profitPotential: 1200, profitMarcat: 380.34, investitie: 21443, profitAnuala: 4.5},
+          {tip:'ETF', profitPotential: 200, profitMarcat: 180.34, investitie: 7255, profitAnuala: 1.5},
+          {tip:'Economii', profitPotential: 358, profitMarcat: 2380.34, investitie: 10000, profitAnuala: 14.7,},
+          {tip:'Titluri', profitPotential: 1210, profitMarcat: 80.34, investitie: 11443, profitAnuala: 2.5,},
+          {tip:'Depozite', profitPotential: 100, profitMarcat: 580.34, investitie: 71443, profitAnuala: 3.6,},
     ]
 
   // Set options for pie chart.
@@ -274,6 +231,7 @@
       google.charts.setOnLoadCallback(function () {drawPieChart(piechartData, pieChartOptions, 'chart-detineri', pieChartTitle)});
       google.charts.setOnLoadCallback(drawVaritatieProfit);
       google.charts.setOnLoadCallback(drawVariatieActiv);
+      google.charts.setOnLoadCallback(drawVaritatieInvestitie);
       // Callback that draws the pie chart
       
       
@@ -300,7 +258,7 @@
       let tableContent = ''
       array.forEach(element => {
         tableContent = tableContent + '<tr><td>' + element.tip + '</td><td>' + element.profitPotential + '</td><td>' +
-          element.profitMarcat + '</td><td>' + element.profitAnuala + '</td></tr>'
+          element.profitMarcat + '</td><td>' + element.investitie + '</td><td>' + element.profitAnuala + '</td></tr>'
       });
       document.getElementById('profit-investitii').innerHTML = tableContent
     }
@@ -354,6 +312,38 @@
 
       chart.draw(data, options);
       }
+
+      function drawVaritatieInvestitie() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('date', 'Luna');
+        data.addColumn('number', 'Investitie');
+
+        data.addRows([
+          [new Date(2025,2,1), 1250],   [new Date(2025,2,2), 1336],  [new Date(2025,3,3), 1122],  [new Date(2025,4,4), 1700],  [new Date(2025,5,6), 1825],  [new Date(2025,6,7), 1444]
+        ]);
+
+        var options = {
+          hAxis: {
+            title: 'Data',
+            format: 'YY-MM'
+          },
+          vAxis: {
+            title: 'Valoare'
+          },
+          height: 450,
+          chartArea: {
+          width:"90%"
+          },
+          title: "Variatie Investitie",
+          titleTextStyle: {fontSize:20,color:'red'},
+          
+        };
+
+var chart = new google.visualization.LineChart(document.getElementById('variatie-investitie'));
+
+chart.draw(data, options);
+}
       
       function drawVariatieActiv() {
       var data = google.visualization.arrayToDataTable([
