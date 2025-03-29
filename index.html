@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -17,48 +18,37 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a> 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" aria-current="page" href="index.html">Tranzactii</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
     <div class="container">
-      <div class="row grafic">
-        <div id="chart_div"></div>
-        <div id="total-wealth" class="col-sm text-center grafic">
-          <h2>Total Wealth: 14000 RON</h2>
-          <h2>Total Profit: 1712 RON</h2>
+      <div class="row m-4 p-3">
+        <div id="total-wealth" class="col-sm text-center m-2 p-1 summary-col bg-dark">
+          <h2><i class="bi bi-bank2"></i></h2>
+          <h2>RON 14000</h2>
+          <span><i class="bi bi-arrow-up"></i> 5% fata de ziua anterioara</span>
         </div>
-        <div id="total-ro" class="col-sm text-center grafic">
-          <h2>Total in BVB: 6500 RON</h2>
-          <h2>Total Profit: 1522 RON</h2>
+        <div id="total-ro" class="col-sm text-center m-2 p-1 summary-col bg-primary">
+          <h2><i class="bi bi-graph-up-arrow"></i></h2>
+          <h2>6500 RON</h2>
+          <span><i class="bi bi-arrow-up"></i> 2% fata de ziua anterioara</span>
         </div>
-        <div id="total-ext" class="col-sm text-center grafic">
-          <h2>Total in Extern: 7533 RON</h2>
-          <h2>Total Profit: 1222 RON</h2>
+        <div id="total-ext" class="col-sm text-center m-2 p-1 summary-col bg-success">
+          <h2><i class="bi bi-bar-chart-line-fill"></i></h2>
+          <h2>7899 RON</h2>
+          <span><i class="bi bi-arrow-down"></i> -2% fata de ziua anterioara</span>
         </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row m-4">
+        <div id="treemap-detineri"></div>
       </div>
     </div>
     <div class="container">
@@ -309,14 +299,10 @@
 
       let tableContent = ''
       array.forEach(element => {
-        
         tableContent = tableContent + '<tr><td>' + element.tip + '</td><td>' + element.profitPotential + '</td><td>' +
           element.profitMarcat + '</td><td>' + element.profitAnuala + '</td></tr>'
-
       });
-
       document.getElementById('profit-investitii').innerHTML = tableContent
-    
     }
 
       
@@ -410,22 +396,22 @@
           ['Global',    null,                 0,                               0],
           ['BVB -2%',   'Global',            0,                             0],
           ['ETF -1%',    'Global',             0,                              0],
-          ['SNP 2.48%',    'BVB -2%',            7469.55,                              2.48],
-          ['SNN -0.21%',       'BVB -2%',            1535.2,                              -0.21],
-          ['H2O 0.27%',    'BVB -2%',            5937.6,                              0.27],
-          ['MCAB -5%',    'BVB -2%',            71.2,                              -5],
-          ['BRD 6.65%',    'BVB -2%',            1296.4,                              6.65],
-          ['DIGI 5.71%',    'BVB -2%',            1680,                              5.71],
-          ['TLV 9.57%',    'BVB -2%',            2870,                              9.57],
-          ['SNG 16.84%',    'BVB -2%',            3624,                              16.84],
-          ['TEL 8.08%',    'BVB -2%',            1068.75,                              8.08],
-          ['America 10%',    'ETF -1%',             3557.4,                              10],
-          ['Europe -2%',   'ETF -1%',             3167.45,                              -2],
-          ['Asia -10%',    'ETF -1%',             1162.49,                              -10],
-          ['AI&ROB 4%',     'ETF -1%',             702.13,                              4]
+          ['SNP 2.48%',    'BVB -2%',           29.23,                              2.48],
+          ['SNN -0.21%',       'BVB -2%',            7,                              -0.21],
+          ['H2O 0.27%',    'BVB -2%',            23.24,                              0.27],
+          ['MCAB -5%',    'BVB -2%',            0.28,                              -5],
+          ['BRD 6.65%',    'BVB -2%',            5.07,                              6.65],
+          ['DIGI 5.71%',    'BVB -2%',            6.57,                              5.71],
+          ['TLV 9.57%',    'BVB -2%',            11.23,                              9.57],
+          ['SNG 16.84%',    'BVB -2%',            14.18,                              16.84],
+          ['TEL 8.08%',    'BVB -2%',            4.18,                              8.08],
+          ['America 10%',    'ETF -1%',             41.42,                              10],
+          ['Europe -2%',   'ETF -1%',             13.53,                              -2],
+          ['Asia -10%',    'ETF -1%',             36.88,                              -10],
+          ['AI&ROB 4%',     'ETF -1%',             8.17,                              4]
 
         ]);
-        tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
+        tree = new google.visualization.TreeMap(document.getElementById('treemap-detineri'));
 
         tree.draw(data, {
           minColor: '#f00',
@@ -438,7 +424,7 @@
           height: 250,
           generateTooltip: showFullTooltip,
           eventsConfig: {
-              rollup: ['dblclick'], // right-click
+              rollup: ['dblclick'],
               drilldown: ['click']
           }
         });
@@ -446,12 +432,8 @@
   function showFullTooltip(row, size, value) {
     return '<div style="background:#fd9; padding:10px; border-style:solid">' +
            '<span style="font-family:Courier"><b>' + data.getValue(row, 0) +
-           '</b>, ' + data.getValue(row, 1) + ', ' + data.getValue(row, 2) +
-           ', ' + data.getValue(row, 3) + '</span><br>' +
-           'Datatable row: ' + row + '<br>' +
-	   data.getColumnLabel(2) +
-           ' (total value of this cell and its children): ' + size + '<br>' +
-	   data.getColumnLabel(3) + ': ' + value + ' </div>';
+           '</b>, ' + data.getValue(row, 2) +
+           ', ' + data.getValue(row, 3) + '</span><br>'
   }
 
       }
