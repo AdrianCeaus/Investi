@@ -46,6 +46,7 @@
     </nav>
     <div class="container">
       <div class="row grafic">
+        <div id="chart_div"></div>
         <div id="total-wealth" class="col-sm text-center grafic">
           <h2>Total Wealth: 14000 RON</h2>
           <h2>Total Profit: 1712 RON</h2>
@@ -166,7 +167,7 @@
         </div>
       </div>
       <div class="row grafic">
-        <div id="chart_div"></div>
+        
       </div>
       <!--<div class="row grafic">
         <div id="detineri-bvb" class="col-sm grafic"></div>
@@ -405,46 +406,38 @@
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)'],
+          ['Actiune', 'Tip', 'Market Value', 'Value increase/decrease'],
           ['Global',    null,                 0,                               0],
-          ['America',   'Global',             0,                               0],
-          ['Europe',    'Global',             0,                               0],
-          ['Asia',      'Global',             0,                               0],
-          ['Australia', 'Global',             0,                               0],
-          ['Africa',    'Global',             0,                               0],
-          ['Brazil',    'America',            11,                              10],
-          ['USA',       'America',            52,                              31],
-          ['Mexico',    'America',            24,                              12],
-          ['Canada',    'America',            56,                              -23],
-          ['France',    'Europe',             42,                              -11],
-          ['Germany',   'Europe',             31,                              -2],
-          ['Sweden',    'Europe',             22,                              -13],
-          ['Italy',     'Europe',             17,                              4],
-          ['UK',        'Europe',             21,                              -5],
-          ['China',     'Asia',               36,                              4],
-          ['Japan',     'Asia',               20,                              -12],
-          ['India',     'Asia',               40,                              63],
-          ['Laos',      'Asia',               4,                               34],
-          ['Mongolia',  'Asia',               1,                               -5],
-          ['Israel',    'Asia',               12,                              24],
-          ['Iran',      'Asia',               18,                              13],
-          ['Pakistan',  'Asia',               11,                              -52],
-          ['Egypt',     'Africa',             21,                              0],
-          ['S. Africa', 'Africa',             30,                              43],
-          ['Sudan',     'Africa',             12,                              2],
-          ['Congo',     'Africa',             10,                              12],
-          ['Zaire',     'Africa',             8,                               10]
-        ]);
+          ['BVB -2%',   'Global',            0,                             0],
+          ['ETF -1%',    'Global',             0,                              0],
+          ['SNP 2.48%',    'BVB -2%',            7469.55,                              2.48],
+          ['SNN -0.21%',       'BVB -2%',            1535.2,                              -0.21],
+          ['H2O 0.27%',    'BVB -2%',            5937.6,                              0.27],
+          ['MCAB -5%',    'BVB -2%',            71.2,                              -5],
+          ['BRD 6.65%',    'BVB -2%',            1296.4,                              6.65],
+          ['DIGI 5.71%',    'BVB -2%',            1680,                              5.71],
+          ['TLV 9.57%',    'BVB -2%',            2870,                              9.57],
+          ['SNG 16.84%',    'BVB -2%',            3624,                              16.84],
+          ['TEL 8.08%',    'BVB -2%',            1068.75,                              8.08],
+          ['America 10%',    'ETF -1%',             3557.4,                              10],
+          ['Europe -2%',   'ETF -1%',             3167.45,                              -2],
+          ['Asia -10%',    'ETF -1%',             1162.49,                              -10],
+          ['AI&ROB 4%',     'ETF -1%',             702.13,                              4]
 
+        ]);
         tree = new google.visualization.TreeMap(document.getElementById('chart_div'));
 
         tree.draw(data, {
           minColor: '#f00',
-          midColor: '#ddd',
           maxColor: '#0d0',
-          headerHeight: 15,
+          maxDepth: 2,
+          minColorValue: -30,
+          maxColorValue: 30,
+          headerHeight: 25,
           fontColor: 'black',
+          fontSize: 25,
           showScale: true,
+          height: 350,
           generateTooltip: showFullTooltip
         });
         
