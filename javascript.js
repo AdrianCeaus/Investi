@@ -147,7 +147,7 @@ var pieChartOptions = { title: '',
 };
 
 let lineChartOptions = {
-  hAxis: { title: 'Data',format: 'YY-MM-dd '},
+  hAxis: { title: 'Data', format: 'dd-MM'},
   vAxis: { title: 'Valoare' },
   height: 450,
   chartArea: { width:"90%" },
@@ -229,6 +229,7 @@ google.charts.setOnLoadCallback(drawTreeChart);
 google.charts.setOnLoadCallback(function () {drawStackedBarChart (detineriVsTintaProcent, stackedBarChartOptions, 'stacked-chart-dif-procent', 'Detineri vb Tinta (Procent)')});
 google.charts.setOnLoadCallback(function () {drawStackedBarChart (detineriVsTintaValoare, stackedBarChartOptions, 'stacked-chart-dif-valoare', 'Detineri vb Tinta (Valoare)')});
 google.charts.setOnLoadCallback(function () {drawLineChart(variatieProfit, lineChartOptions, 'variatie-profit', 'Variatie profit')});
+google.charts.setOnLoadCallback(function () {drawLineChart(variatieProfit, lineChartOptions, 'variatie-profit-total', 'Variatie profit')});
 google.charts.setOnLoadCallback(function () {drawLineChart(variatieInvestitie, lineChartOptions, 'variatie-investitie', 'Variatie investitie')});
 google.charts.setOnLoadCallback(function () {drawColumnChart(variatieActivBVB,columnChartOptions, 'variatie-activ','Variatie Activ BVB')});
 google.charts.setOnLoadCallback(function () {drawPieChart(detineriBVB, pieChartOptions, 'chart-detineri', 'Procentaj detineri pe BVB')});
@@ -309,3 +310,19 @@ function drawStackedBarChart(stackedBarChartData, stackedBarChartOptions, divNam
   chart.draw(data, stackedBarChartOptions);
 
 }
+
+
+/*drawTableTipInvestitie(profitInvestitii);
+function drawTableTipInvestitie (array) {
+
+  let tableContent = ''
+  array.forEach(element => {
+    
+    tableContent = tableContent + '<tr><td>' + element.tip + '</td><td>' + element.profitPotential + '</td><td>' +
+      element.tinta + '</td><td>' + element.valTinta + '</td><td>' + element.diferenta + '</td></tr>'
+  
+  });
+  {tip:'Bursa', profitPotential: 1200, profitMarcat: 380.34, investitie: 21443, profitAnuala: 4.5},
+  document.getElementById('profit-investitii').innerHTML = tableContent
+
+}*/
